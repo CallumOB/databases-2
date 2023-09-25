@@ -11,3 +11,9 @@ avg(price)  over (partition by group_name)
 -- Add partition clause here
 FROM products
 JOIN  product_groups USING (group_id);
+
+select product_name, group_name, price, row_number () over (
+	partition by group_name
+	order by price) ThisRank
+from products 
+join product_groups using (group_id);

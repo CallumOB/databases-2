@@ -25,4 +25,3 @@ Join b2_corderline using (corderno)
 Join b2_stock using (stock_code);
 
 Select customer_name from custbought where stock_description = 'Phillips screwdriver';
-

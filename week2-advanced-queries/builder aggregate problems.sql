@@ -3,10 +3,11 @@
 
 select corderno, stock_code, 
 -- calculate cost here
+sum(unit_price * quantityrequired) "Line Cost"
 from b2_corder join b2_corderline using (corderno)
 join b2_stock using (stock_code)
 --add any clauses required here
-;
+group by corderno, stock_code  ;
 
 /* Display the customer order number (corderno) and total cost (unit_price * quantityrequired) 
  * of  every customer order (corder).*/
@@ -21,7 +22,8 @@ join b2_stock using (stock_code)
  * of  every customer order that costs more than €2,000.*/
 select corderno, 
 -- calculate total cost here
+
 from b2_corder join b2_corderline using (corderno)
 join b2_stock using (stock_code)
 --add any clauses required here
-;
+group by ;
