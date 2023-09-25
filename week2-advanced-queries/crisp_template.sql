@@ -1,3 +1,5 @@
+
+
 select user;
 /*select * from crisp_type;
 select * from consumer;
@@ -65,4 +67,7 @@ select CN_NAME from consumer A where not exists
   (select * from has_eaten X
     where X.consumerid = A.consumerid
   and X.crispkey = B.crispkey));
+ 
+ select * from consumer full join has_eaten using (consumerId)
+ full join crsip_type using (crispkey);
 
