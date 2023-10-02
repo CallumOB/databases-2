@@ -1,14 +1,14 @@
-/*select * from cr_crisp_type;
-select * from cr_consumer;
-select * from cr_has_eaten;
+/*select * from crisp_type;
+select * from consumer;
+select * from has_eaten;
 */
 /*                    MAKE THE VIEWS                            */
 --Make a view showing the join
 
 create or replace view crispeater as 
-  SELECT CN_NAME, CP_NAME FROM cr_consumer
-  JOIN cr_has_eaten USING (CONSUMERID)
-  JOIN cr_crisp_type USING (CRISPKEY);
+  SELECT CN_NAME, CP_NAME FROM consumer
+  JOIN has_eaten USING (CONSUMERID)
+  JOIN crisp_type USING (CRISPKEY);
 select * from crispeater;
 
 /*          ONLY        */
@@ -59,9 +59,9 @@ select CN_NAME from crispeater where CP_NAME = 'Buffalo');
 occurrences of B*/
 
 --Consumers who  ate all types of crisps.
-select CN_NAME from cr_consumer A where not exists
-  (select * from cr_crisp_type B where not exists 
-  (select * from cr_has_eaten X
+select CN_NAME from consumer A where not exists
+  (select * from crisp_type B where not exists 
+  (select * from has_eaten X
     where X.consumerid = A.consumerid
   and X.crispkey = B.crispkey));
 
