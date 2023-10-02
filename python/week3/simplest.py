@@ -3,9 +3,9 @@ from psycopg2 import Error
 try:
     connection = psycopg2.connect(
         host="localhost",
-        user = "BUILDER",
+        user = "builder",
         password = getpass.getpass(prompt='Password:'),
-        port="5432",
+        port="54321",
         database="postgres")
     custname = input('Enter customer name: ')
     # Create a cursor to perform database operations
