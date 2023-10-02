@@ -5,9 +5,9 @@ FirstTime=True
 try:
     connection = psycopg2.connect(
         host="localhost",
-        user = "BUILDER",
+        user = "builder",
         password = getpass.getpass(),
-        port="5432",
+        port="54321",
         database="postgres")
     # Create a cursor to perform database operations
     cursor = connection.cursor()
