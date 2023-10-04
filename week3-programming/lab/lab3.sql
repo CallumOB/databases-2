@@ -12,6 +12,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql
 
+select addstudent('Callum');
+select * from student;
+
 
 -- function to add a new subject and return the subject id
 CREATE OR replace FUNCTION ADDSUBJECT(
@@ -27,14 +30,24 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql
 
+select addsubject('Computer Science');
+select * from subject;
+
 
 -- function to add a new achievement given the student and subject name 
 CREATE OR replace FUNCTION ADDACHIEVEMENT(
 	p_stid student.st_id%TYPE,
 	p_sbid subject.sb_id%type)
+	returns void as
+$$
 BEGIN	
 	INSERT INTO achievement (st_id, sb_id)
 	VALUES (p_stid, p_sbid);
 END;
 $$ LANGUAGE plpgsql
+
+select addachievement(15, 5);
+select * from achievement;
+
+
 
