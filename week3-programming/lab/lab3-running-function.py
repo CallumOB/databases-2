@@ -10,11 +10,10 @@ try:
     # Create a cursor to perform database operations
     cursor = connection.cursor()
     # First time around, check to see what information you're getting back from the server.
-    cid = input('Enter Customer Id: ')
-    sno = input('Enter Staff Number: ')
-    cursor.callproc('ADDCUSTORDER',(cid, sno))
+    sname = str(input('Enter Student Name: '))
+    cursor.callproc('ADDSTUDENT', (sname,))
     connection.commit()
-    print("Customer Order id = ", cursor.fetchone()[0])
+    print("Student ID = ", cursor.fetchone()[0])
 except (Exception, Error) as error:
     print("Error while connecting to PostgreSQL")
     print("Error details: ",error)

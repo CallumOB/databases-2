@@ -2,13 +2,13 @@ import psycopg2, getpass, pandas as pd
 from psycopg2 import Error
 try:
     connection = psycopg2.connect(
-        host="",  
-        user = "",
-        password=getpass.getpass(prompt='Password '),
-        port="", 
-        database="")
+        host="localhost",  
+        user = "builder",
+        password=getpass.getpass('Password: '),
+        port="54321", 
+        database="postgres")
     cursor = connection.cursor()
-    postgreSQL_select_Query = 'select ...'
+    postgreSQL_select_Query = 'select * from student'
     cursor.execute(postgreSQL_select_Query)
     df = pd.DataFrame(
         cursor.fetchall(), 
