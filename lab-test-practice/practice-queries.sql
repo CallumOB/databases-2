@@ -32,7 +32,7 @@ select distinct author_name from "book".author a
 left join "book".authors ar using (author_id)
 left join "book".book b using (isbn)
 left join "book".recommends r using (isbn)
-where b.title in (select * from rec_all);
+where b.title in (select * from mult_recs);
 
 select * from author_rec_all;
 
@@ -99,3 +99,25 @@ select * from authors_db1_and_ml;
 select * from authors_db1_xor_ml;
 
 
+-- q7: mod_name of the module that recommends most books
+create or replace view most_rec as 
+select mod_name, rank() over (
+	order by count(r.isbn) desc) as recommendation_rank
+from "book".module m
+left join "book".recommends r using (mod_code)
+group by m.mod_code, m.mod_name;    
+       
+select mod_name from most_rec
+where recommendation_rank = 1;
+
+-- q8: title, year, author's name and order by year of publication from that author
+create or replace view author_ordered as
+select title, yearofpublication, author_name, rank() over (
+	partition by a.author_name
+	order by yearofpublication) as pub_year
+from "book".book b 
+join "book".authors ar using (isbn)
+join "book".author a using (author_id)
+order by author_name asc;
+
+select * from author_ordered;
