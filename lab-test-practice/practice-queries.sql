@@ -113,8 +113,8 @@ where recommendation_rank = 1;
 -- q8: title, year, author's name and order by year of publication from that author
 create or replace view author_ordered as
 select title, yearofpublication, author_name, rank() over (
-	partition by a.author_name
-	order by yearofpublication) as pub_year
+	partition by author_name
+	order by yearofpublication) as year_pub
 from "book".book b 
 join "book".authors ar using (isbn)
 join "book".author a using (author_id)
