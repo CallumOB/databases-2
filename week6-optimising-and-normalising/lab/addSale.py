@@ -17,7 +17,10 @@ try:
     cursor.execute(f"CALL addSale('{scode}', {sno}, {quantity});")
     connection.commit()
 
-    print(connection.notices[0])
+    if len(connection.notices) > 0:
+        print(connection.notices[0])
+    else: 
+        print("Sale added successfully")
         
 except (Exception, Error) as error:
     print("Error while connecting to PostgreSQL")
