@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F2F0EA3E-2413-C5FD-ED99-50BC71A47F85" name="student">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:15:19 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<engineerTo>
+<item key="EA7BD08D-C0E3-CEB2-9C5B-51A5D9E6C43B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="st_id" id="0AF6C4B8-A2DF-4A66-2E90-9F8D3E4E8F27">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:15:24 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<engineerTo>
+<item key="EA7BD08D-C0E3-CEB2-9C5B-51A5D9E6C43B" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="st_name" id="CC30EA81-A8F7-9C99-7253-060B5D0CA926">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:15:28 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<engineerTo>
+<item key="EA7BD08D-C0E3-CEB2-9C5B-51A5D9E6C43B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B9133023-D888-FBCC-CA01-E48D5006A3FE" name="student PK">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:15:27 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<engineerTo>
+<item key="EA7BD08D-C0E3-CEB2-9C5B-51A5D9E6C43B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0AF6C4B8-A2DF-4A66-2E90-9F8D3E4E8F27</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

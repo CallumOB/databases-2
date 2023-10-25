@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85FD0EA5-2991-16AA-B2D5-CDD9DDF2D7DF" name="subject">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:16:20 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sb_id" id="8D575A0F-9656-1559-8A5B-5186F4E0CC05">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:16:42 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sb_name" id="194E36F3-00FE-E8B3-7673-62776B653260">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:16:42 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sb_syllabus" id="07935A8C-E7CB-40C0-D1F3-0A303F9250AB">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:16:42 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF77DE2E-C1F2-78E9-890F-278E190E9193" name="subject_PK">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:16:42 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D575A0F-9656-1559-8A5B-5186F4E0CC05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

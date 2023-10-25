@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D06AC191-2556-168A-89A2-DFC85BBF78B4" name="achievement">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:20:29 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sb_id" id="FE7A1782-9EA3-029C-BFFB-3A71C3E265C8">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:21:04 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51966AED-DD06-3028-1167-4A1AB212C64C" referredColumn="8D575A0F-9656-1559-8A5B-5186F4E0CC05"/>
+</associations>
+</Column>
+<Column name="st_id" id="4E50CF57-2DD3-2856-3444-7570044988AC">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:22:11 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FB67D6E-485D-25EF-74CC-7BE802CBC8B1" referredColumn="22BC6177-6881-7C5E-C5CB-5C928FBE667D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="33B13161-E1DA-8246-F4B8-5DE7531551CC" name="achievement_PK">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:20:55 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE7A1782-9EA3-029C-BFFB-3A71C3E265C8"/>
+<colUsage columnID="4E50CF57-2DD3-2856-3444-7570044988AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B26C3DC-5BAC-2B24-978C-CE4C1C33476E" name="sb_id_PK">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:21:04 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE7A1782-9EA3-029C-BFFB-3A71C3E265C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7BF09C2-6939-E0F1-C95A-2EED968A5ED8" name="st_id_FK">
+<createdBy>callumobrien</createdBy>
+<createdTime>2023-10-25 09:22:11 UTC</createdTime>
+<ownerDesignName>student_subject</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E50CF57-2DD3-2856-3444-7570044988AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
