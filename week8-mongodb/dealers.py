@@ -1,6 +1,5 @@
 import pandas as pd 
 import json
-import pymongo
 from pymongo import MongoClient
 
 uri = 'mongodb://admin:Sp00ky!@localhost:27017/?AuthSource=admin'
