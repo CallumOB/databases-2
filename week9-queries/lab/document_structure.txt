@@ -1,0 +1,4 @@
+Using the swimming data I created a 'Teams' collection. 
+This is a 1:few relationship between the Team and a Swim.
+The unique information taken is the team code and name, i.e IRL and Ireland as this data is 1:1. 
+Each team then has an embedded list of swims the team has competed in.
